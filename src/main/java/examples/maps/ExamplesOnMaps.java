@@ -11,7 +11,9 @@ public class ExamplesOnMaps {
 
       //  exampleOne();
 
-        filterBasedOnPrice();
+      //  filterBasedOnPrice();
+
+        mergeTwoMaps();
 
     }
 
@@ -37,5 +39,21 @@ public class ExamplesOnMaps {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
         expensiveProducts.forEach((product, price) -> System.out.println(product + " costs " + price));
+    }
+
+    public static void mergeTwoMaps(){
+
+        Map<String,Integer> map1 = new HashMap<>();
+        map1.put("Laptop", 1200);
+        map1.put("SmartPhone", 800);
+
+        Map<String,Integer> map2 = new HashMap<>();
+        map2.put("Tablet", 400);
+        map2.put("Phone", 150);
+
+        map2.forEach((key,value) -> map1.merge(key,value,Integer::sum));
+
+        map1.forEach((product, price) -> System.out.println(product + " costs " + price));
+
     }
 }
