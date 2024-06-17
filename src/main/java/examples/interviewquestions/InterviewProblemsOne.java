@@ -3,12 +3,15 @@ package examples.interviewquestions;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class InterviewProblemsOne {
 
     public static void main(String[] args){
 
         findMaxInteger();
+
+        toUpperCase();
 
     }
 
@@ -20,5 +23,15 @@ public class InterviewProblemsOne {
 
         System.out.println("Max number -> "+max.get());
 
+    }
+
+    public static void toUpperCase(){
+        List<String> names = Arrays.asList("Hemnath","Kumar","Anil");
+
+        List<String> upperCaseNames = names.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
+
+        upperCaseNames.forEach(name -> System.out.println(name));
     }
 }
