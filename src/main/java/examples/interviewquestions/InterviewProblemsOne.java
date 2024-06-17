@@ -13,6 +13,8 @@ public class InterviewProblemsOne {
 
         toUpperCase();
 
+        filterForEvenNumbers();
+
     }
 
     public static void findMaxInteger(){
@@ -33,5 +35,15 @@ public class InterviewProblemsOne {
                 .collect(Collectors.toList());
 
         upperCaseNames.forEach(name -> System.out.println(name));
+    }
+
+    public static void filterForEvenNumbers(){
+        List<Integer> numbers = Arrays.asList(3,5,4,2,6,7,8,9);
+
+        List<Integer> evenNumbers = numbers.stream()
+                .filter(n -> n%2 == 0)
+                .collect(Collectors.toList());
+
+        evenNumbers.forEach(System.out::println);
     }
 }
