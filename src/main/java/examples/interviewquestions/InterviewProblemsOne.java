@@ -9,11 +9,17 @@ public class InterviewProblemsOne {
 
     public static void main(String[] args){
 
+        System.out.println("\n----------------------\n");
         findMaxInteger();
 
+        System.out.println("\n----------------------\n");
         toUpperCase();
 
+        System.out.println("\n----------------------\n");
         filterForEvenNumbers();
+
+        System.out.println("\n----------------------\n");
+        findAverage();
 
     }
 
@@ -45,5 +51,16 @@ public class InterviewProblemsOne {
                 .collect(Collectors.toList());
 
         evenNumbers.forEach(System.out::println);
+    }
+
+    public static void findAverage(){
+        List<Integer> numbers = Arrays.asList(2,4,5,6,7);
+
+        double average = numbers.stream()
+                .mapToInt(Integer::intValue)
+                .average()
+                .orElse(0.0);
+
+        System.out.println("Average -> "+average);
     }
 }
