@@ -1,7 +1,6 @@
 package examples.interviewquestions.maths;
 
 public class HarshadNumber {
-
     public static void main(String[] args) {
 
         int x = 18;
