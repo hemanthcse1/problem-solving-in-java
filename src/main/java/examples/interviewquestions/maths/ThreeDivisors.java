@@ -22,16 +22,10 @@ public class ThreeDivisors {
     }
 
     public static void main(String[] args) {
-        int n1 = 9;
+        int n1 = 2;
         System.out.println(isThree(n1));
 
-        int n2 = 10;
+        int n2 = 4;
         System.out.println(isThree(n2));
-
-        int n3 = 49;
-        System.out.println(isThree(n3));
-
-        int n4 = 25;
-        System.out.println(isThree(n4));
     }
 }
