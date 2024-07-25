@@ -1,12 +1,12 @@
 package examples.interviewquestions.stacks;
 
-public class Stack {
+public class StackSolution {
 
     private int[] arr;
     private int top;
     private int capacity;
 
-    public Stack(int size) {
+    public StackSolution(int size) {
         arr = new int[size];
         capacity = size;
         top = -1;
