@@ -8,7 +8,6 @@ public class Solution {
     public int countStudents(int[] students, int[] sandwiches) {
         Queue<Integer> studentQueue = new LinkedList<>();
         Stack<Integer> sandwichStack = new Stack<>();
-
         for (int student : students) {
             studentQueue.offer(student);
         }
@@ -16,7 +15,8 @@ public class Solution {
             sandwichStack.push(sandwiches[i]);
         }
         int unableToEatCount = 0;
-        while (!studentQueue.isEmpty() && unableToEatCount != studentQueue.size()) {
+        while (!studentQueue.isEmpty() &&
+                unableToEatCount != studentQueue.size()) {
             int student = studentQueue.poll();
 
             if (student == sandwichStack.peek()) {
@@ -29,11 +29,11 @@ public class Solution {
         }
         return unableToEatCount;
     }
-
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] students = {1, 1, 0, 0};
         int[] sandwiches = {0, 1, 0, 1};
-        System.out.println(solution.countStudents(students, sandwiches));
+        System.out.println(solution.countStudents(students,
+                sandwiches));
     }
 }
