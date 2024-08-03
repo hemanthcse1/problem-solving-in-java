@@ -18,7 +18,6 @@ public class CountPrefixes {
     public static void main(String[] args) {
         CountPrefixes solution = new CountPrefixes();
 
-
         String[] words = {"a", "b", "c", "ab", "bc", "abc"};
         String s = "abc";
         int result = solution.countPrefixes(words, s);
