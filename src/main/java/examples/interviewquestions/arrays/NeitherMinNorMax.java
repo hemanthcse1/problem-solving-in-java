@@ -5,7 +5,6 @@ public class NeitherMinNorMax {
         int[] nums1 = {3, 2, 1, 4};
         System.out.println(findNumber(nums1));
     }
-
     public static int findNumber(int[] nums) {
         if (nums.length < 3) {
             return -1;
