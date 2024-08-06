@@ -12,7 +12,6 @@ public class IntersectionOfArrays {
             System.out.print(num + " ");
         }
     }
-
     public static int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();
         for (int num : nums1) {
@@ -30,7 +29,6 @@ public class IntersectionOfArrays {
         for (int num : resultSet) {
             result[index++] = num;
         }
-
         return result;
     }
 }
