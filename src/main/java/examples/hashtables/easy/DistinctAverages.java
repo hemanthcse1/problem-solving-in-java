@@ -26,9 +26,9 @@ public class DistinctAverages {
         DistinctAverages da = new DistinctAverages();
 
         int[] nums1 = {1, 3, 3, 2, 4, 2};
-        System.out.println("Distinct Averages: " + da.distinctAverages(nums1)); // Output: 2
+        System.out.println("Distinct Averages: " + da.distinctAverages(nums1));
 
         int[] nums2 = {1, 2, 3, 4};
-        System.out.println("Distinct Averages: " + da.distinctAverages(nums2)); // Output: 2
+        System.out.println("Distinct Averages: " + da.distinctAverages(nums2));
     }
 }
