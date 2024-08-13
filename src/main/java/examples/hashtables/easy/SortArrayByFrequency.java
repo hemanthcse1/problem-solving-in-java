@@ -25,7 +25,6 @@ public class SortArrayByFrequency {
 
         return Arrays.stream(numsArray).mapToInt(Integer::intValue).toArray();
     }
-
     public static void main(String[] args) {
         int[] nums = {1, 1, 2, 2, 2, 3};
         int[] result = frequencySort(nums);
