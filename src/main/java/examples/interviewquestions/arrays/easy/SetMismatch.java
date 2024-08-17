@@ -22,10 +22,8 @@ public class SetMismatch {
         }
         return result;
     }
-
     public static void main(String[] args) {
         SetMismatch sm = new SetMismatch();
-
         int[] nums1 = {1, 2, 2, 4};
         System.out.println(Arrays.toString(sm.findErrorNums(nums1)));  // Output: [2, 3]
     }
