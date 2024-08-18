@@ -17,7 +17,6 @@ public class MinimumNumberOfChairs {
 
     public static void main(String[] args) {
         String s1 = "EEEEEEE";
-
         System.out.println(minChairsRequired(s1));
     }
 }
