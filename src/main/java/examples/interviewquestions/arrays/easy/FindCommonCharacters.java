@@ -13,7 +13,6 @@ public class FindCommonCharacters {
             for (char c : word.toCharArray()) {
                 charFreq[c - 'a']++;
             }
-
             for (int i = 0; i < 26; i++) {
                 minFreq[i] = Math.min(minFreq[i], charFreq[i]);
             }
@@ -24,7 +23,6 @@ public class FindCommonCharacters {
                 result.add(String.valueOf((char) (i + 'a')));
             }
         }
-
         return result;
     }
 
