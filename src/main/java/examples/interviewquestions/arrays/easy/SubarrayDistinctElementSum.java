@@ -32,9 +32,9 @@ public class SubarrayDistinctElementSum {
 
     public static void main(String[] args) {
         int[] nums1 = {1, 2, 1};
-        System.out.println(sumOfSquaresOfDistinctCounts(nums1));
+      //  System.out.println(sumOfSquaresOfDistinctCounts(nums1));
 
         int[] nums2 = {1, 1};
-        System.out.println(sumOfSquaresOfDistinctCounts(nums2));
+     //   System.out.println(sumOfSquaresOfDistinctCounts(nums2));
     }
 }

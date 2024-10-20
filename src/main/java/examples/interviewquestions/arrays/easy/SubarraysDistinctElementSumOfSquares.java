@@ -25,10 +25,10 @@ public class SubarraysDistinctElementSumOfSquares {
     public static void main(String[] args) {
         // Test case 1
         int[] nums1 = {1, 2, 1};
-        System.out.println(sumsOfSquaresOfDistCounts(nums1));
+       // System.out.println(sumsOfSquaresOfDistCounts(nums1));
 
         // Test case 2
         int[] nums2 = {1, 1};
-        System.out.println(sumsOfSquaresOfDistCounts(nums2));
+     //   System.out.println(sumsOfSquaresOfDistCounts(nums2));
     }
 }
