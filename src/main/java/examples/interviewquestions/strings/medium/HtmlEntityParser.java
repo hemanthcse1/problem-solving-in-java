@@ -13,11 +13,26 @@ public class HtmlEntityParser {
         entityMap.put("&lt;", "<");
         entityMap.put("&frasl;", "/");
 
-        for (Map.Entry<String, String> entry : entityMap.entrySet()) {
-            text = text.replace(entry.getKey(), entry.getValue());
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+
+        while (i < text.length()) {
+            if (text.charAt(i) == '&') {
+                int semicolonIndex = text.indexOf(';', i);
+                if (semicolonIndex != -1) {
+                    String potentialEntity = text.substring(i, semicolonIndex + 1);
+                    if (entityMap.containsKey(potentialEntity)) {
+                        result.append(entityMap.get(potentialEntity));
+                        i = semicolonIndex + 1;
+                        continue;
+                    }
+                }
+            }
+            result.append(text.charAt(i));
+            i++;
         }
 
-        return text;
+        return result.toString();
     }
 
     public static void main(String[] args) {
@@ -25,7 +40,8 @@ public class HtmlEntityParser {
 
         System.out.println(parser.entityParser("&amp; is an HTML entity but &ambassador; is not."));
 
-
         System.out.println(parser.entityParser("and I quote: &quot;...&quot;"));
+
+        System.out.println(parser.entityParser("&amp;quot;&amp;apos;&amp;amp;&amp;gt;&amp;lt;&amp;frasl;"));
     }
 }
