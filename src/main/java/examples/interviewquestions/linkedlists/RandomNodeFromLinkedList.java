@@ -17,7 +17,7 @@ public class RandomNodeFromLinkedList {
     private ListNode head;
     private Random random;
 
-    public Solution(ListNode head) {
+    public RandomNodeFromLinkedList(ListNode head) {
         this.head = head;
         this.random = new Random();
     }
